@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <!-- Primary Meta Tags -->
+    <title>Uncover Wikipedia</title>
+    <meta name="title" content="Uncover Wikipedia">
+    <meta name="description" content="It’s the year 2079, the group MZBA has vandalised the world’s largest online encyclopedia. Now we need you to uncover Wikipedia!">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://metatags.io/">
+    <meta property="og:title" content="Uncover Wikipedia">
+    <meta property="og:description" content="It’s the year 2079, the group MZBA has vandalised the world’s largest online encyclopedia. Now we need you to uncover Wikipedia!">
+    <meta property="og:image" content="https://cloud-wrn9e84gm-hack-club-bot.vercel.app/0uncover-wikipedia.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://metatags.io/">
+    <meta property="twitter:title" content="Uncover Wikipedia">
+    <meta property="twitter:description" content="It’s the year 2079, the group MZBA has vandalised the world’s largest online encyclopedia. Now we need you to uncover Wikipedia!">
+    <meta property="twitter:image" content="https://cloud-wrn9e84gm-hack-club-bot.vercel.app/0uncover-wikipedia.png">
+    <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    <link href="/static/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div id="introBox">
+      <p id="introMessage"></p>
+      <h1 id="introHeader" class="hidden"><span class="censored">UNCOVER</span> WIKIPEDIA</h1>
+      <p id="introButtons" class="hidden">
+        {% if animated == True %}
+            <a href="/play" class="outlined">Start Now →</a>
+        {% endif %}
+        {% if animated == False %}
+            <a href="/play" class="outlined">Play again →</a>
+        {% endif %}
+      </p>
+    </div>
+    {% if animated == True %}
+        <script src="/static/index.js">
+        </script>
+    {% endif %}
+    {% if animated == False %}
+      <style>
+        #introHeader{
+          display: block!important;
+          opacity: 1!important;
+        }
+
+        #introButtons{
+          display: block!important;
+          opacity: 1!important;
+        }
+      </style>
+    {% endif %}
+  </body>
+</html>
